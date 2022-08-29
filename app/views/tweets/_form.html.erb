@@ -19,11 +19,11 @@
  </div>
  </div>
 
-
-<%= form.button "Schedule", class: "btn btn-primary" %>
+<div class="d-flex">
+<%= button_to "Schedule", form.object, method: :new, class: "btn btn-primary me-2" %>
 
 <% if form.object.persisted? %>
 <%= button_to "Delete", form.object, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-danger" %>
 <% end %>
-
+</div>
 <% end %>
